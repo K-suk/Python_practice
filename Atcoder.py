@@ -1471,8 +1471,79 @@
 # else:
 #     print("No")
 
-import bisect
+# import bisect
 
-X,A,D,N = map(int, input().split())
-gN = [i for i in range(A,D*N,N)]
-print(gN)
+# X,A,D,N = map(int, input().split())
+# gN = [i for i in range(A,D*N,N)]
+# print(gN)
+
+# h1,h2,h3,w1,w2,w3 = map(int, input().split())
+# ans = 0
+# for i in range(1,h1-1):
+#     for j in range(1,h2-1):
+#         for k in range(1,h1-1):
+#             for l in range(1,h2-1):
+#                 h1w3 = h1-i-k
+#                 if h1w3 < 1:
+#                     continue
+#                 h2w3 = h2-j-l
+#                 if h2w3 < 1:
+#                     continue
+#                 h3w1 = w1-i-j
+#                 if h3w1 < 1:
+#                     continue
+#                 h3w2 = w2-k-l
+#                 if h3w2 < 1:
+#                     continue
+#                 h3w3 = w3-h1w3-h2w3
+#                 if h3w3 == (h3-h3w1-h3w2) and h3w3 > 0:
+#                     ans += 1
+# print(ans)
+
+# import bisect
+
+# N = int(input())
+# S = input()
+# W = list(map(int, input().split()))
+# Ch = []
+# Ad = []
+# for i,s in enumerate(S):
+#     if S[i] == '1':
+#         Ad.append(W[i])
+#     else:
+#         Ch.append(W[i])
+# Ch.sort()
+# Ad.sort()
+# if len(Ch)==0 or len(Ad)==0:
+#     print(N)
+#     exit()
+# print(Ch,Ad)
+# idx = bisect.bisect_left(Ad,Ch[-1]+1)
+# idx2 = bisect.bisect_left(Ch,Ad[0]-1)
+# print(max((len(Ch)+len(Ad)-idx),len(Ad)+idx2))
+
+# N = int(input())
+# S = input()
+# W = list(map(int,input().split()))
+# L = []
+# for w, s in zip(W,S):
+#   L.append([w,int(s)])
+# L.sort()
+# fx = S.count("1")
+# fx_max = fx
+# adult,child = 0,0
+# for i in range(1,len(L)):
+#   if L[i][0] == L[i-1][0]:
+#     if L[i-1][1] == 1:
+#       adult += 1
+#     else:
+#       child += 1
+#   else:
+#     if L[i-1][1] == 1:
+#       fx += (child - adult - 1)
+#     else:
+#       fx += (child - adult + 1)
+#     adult,child = 0,0
+#     if fx > fx_max:
+#       fx_max = fx
+# print(max(fx_max,S.count("0")))
