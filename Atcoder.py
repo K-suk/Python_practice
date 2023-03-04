@@ -1547,3 +1547,17 @@
 #     if fx > fx_max:
 #       fx_max = fx
 # print(max(fx_max,S.count("0")))
+
+# N,Q = map(int, input().split())
+# S = input()
+# move = 0
+# for i in range(Q):
+#     t,x = map(int,input().split())
+#     if t == 1:
+#         move += x
+#         move %= N
+#     else:
+#         print(S[x-move-1])
+
+S = input()
+T = input()
